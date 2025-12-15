@@ -16,28 +16,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Experience the best premium streaming service with 40,000+ channels & VOD in 4K. Buy our subscription for reliable, buffer-free streaming. Start your free trial!">
-  <meta name="theme-color" content="#ffffff">
-  <title>IPTV Rich - #1 Premium 4K IPTV Service Provider | Free Trial</title>
-  <link rel="canonical" href="https://iptvrich.shop/">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+    content="Big IPTV: #1 Premium B1G IPTV Service. Watch 40,000+ Live Channels, Movies & Series in 8K/4K UHD. Anti-Freeze Technology, 99.9% Uptime, & Built-in VPN. Start your 24h Free Trial today!">
+  <meta name="theme-color" content="#141414">
+  <title>Big IPTV - Premium B1G IPTV Service Provider | 24h Free Trial</title>
+  <link rel="canonical" href="https://bigiptv.shop/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <style>
     /* CRITICAL CSS & DESIGN SYSTEM */
     :root {
-      /* Brand Colors */
-      --primary: #6b46ff;
-      --primary-hover: #5835e5;
-      --secondary: #1e293b;
-      --accent: #f59e0b;
+      /* Brand Colors - Netflix Style */
+      --primary: #E50914;
+      --primary-hover: #B2070F;
+      --secondary: #000000;
+      --accent: #E50914;
 
       /* Neutral Colors */
-      --bg-body: #ffffff;
-      --bg-surface: #f8fafc;
-      --bg-surface-2: #f1f5f9;
-      --text-main: #0f172a;
-      --text-muted: #475569;
-      --border: #e2e8f0;
+      --bg-body: #141414;
+      --bg-surface: #181818;
+      --bg-surface-2: #262626;
+      --text-main: #ffffff;
+      --text-muted: #a3a3a3;
+      --border: #404040;
 
       /* Spacing & Layout */
       --container-width: 1200px;
@@ -69,6 +69,7 @@
       color: var(--text-main);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
+      color-scheme: dark;
     }
 
     img,
@@ -209,7 +210,7 @@
       left: 0;
       right: 0;
       height: var(--header-height);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(20, 20, 20, 0.9);
       backdrop-filter: blur(10px);
       z-index: 1000;
       border-bottom: 1px solid var(--border);
@@ -273,7 +274,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: white;
+      background: var(--bg-body);
       z-index: 999;
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
@@ -295,148 +296,286 @@
       border-bottom: 1px solid var(--bg-surface-2);
     }
 
-    /* Hero */
-    .hero {
-      padding-top: calc(var(--header-height) + 3rem);
-      padding-bottom: 4rem;
-      background: linear-gradient(to bottom, var(--bg-surface), white);
+    /* Global Stats Section - Premium */
+    .stats-grid-modern {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .stat-card-premium {
+      background: var(--bg-surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 1.5rem;
       text-align: center;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .hero p {
-      font-size: 1.125rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-inline: auto;
-    }
-
-    .hero-btns {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      justify-content: center;
-      margin-bottom: 3rem;
-    }
-
-    .hero-image-wrapper {
+      transition: transform 0.3s ease, border-color 0.3s ease;
       position: relative;
-      /* removed effects */
+      overflow: hidden;
     }
 
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
+    .stat-card-premium:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
     }
 
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .stat-number-gradient {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, #ff8a9b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .stat-val {
+    .stat-label-modern {
+      font-size: 1.25rem;
       font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--primary);
+      color: white;
+      margin-bottom: 0.5rem;
     }
 
-    .stat-label {
-      font-size: 0.875rem;
+    .stat-desc-modern {
+      font-size: 0.95rem;
       color: var(--text-muted);
     }
 
     @media (min-width: 768px) {
+      .stats-grid-modern {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    /* Hero Section - Premium Minimal */
+    .hero {
+      padding-top: calc(var(--header-height) + 5rem);
+      padding-bottom: 5rem;
+      background-color: var(--bg-body);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle Glow Effect */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 10% 20%, rgba(229, 9, 20, 0.08), transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text-wrapper {
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Single Premium Action Button */
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.125rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(229, 9, 20, 0.5);
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      z-index: 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      /* Simple minimal shadow */
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (min-width: 900px) {
       .hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 5rem;
         text-align: left;
-        max-width: var(--container-width);
       }
 
-      .hero {
+      .hero-text-wrapper {
         text-align: left;
       }
 
       .hero h1 {
-        font-size: 3.5rem;
-      }
-
-      .hero-btns {
-        flex-direction: row;
-        justify-content: flex-start;
-      }
-
-      .hero-stats {
-        justify-content: flex-start;
+        font-size: 4rem;
       }
 
       .hero p {
-        margin-inline: 0;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
 
-    /* Features */
-    .features-grid {
+    /* Features Section - Premium Modern */
+    .features-premium {
+      padding: 6rem 0;
+      position: relative;
+      background-color: var(--bg-body);
+    }
+
+    .features-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .features-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #ffffff, #a3a3a3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .features-header p {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    .premium-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
     }
 
-    .feature-card {
-      padding: 2rem;
-      background: white;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      transition: transform 0.2s;
+    .premium-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
     }
 
-    .feature-card:hover {
+    .premium-card:hover {
       transform: translateY(-5px);
-      border-color: var(--primary);
+      border-color: rgba(229, 9, 20, 0.5);
+      /* Primary color hint */
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--bg-surface-2);
-      border-radius: var(--radius-sm);
+    .icon-wrapper {
+      width: 3.5rem;
+      height: 3.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--primary);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .premium-card:hover .icon-wrapper {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .premium-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
       margin-bottom: 1rem;
+      color: white;
+      letter-spacing: -0.01em;
     }
 
-    .feature-card h3 {
-      margin-bottom: 0.5rem;
+    .premium-card p {
+      color: #a3a3a3;
+      line-height: 1.6;
+      font-size: 1rem;
     }
 
-    .feature-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    @media (min-width: 768px) {
-      .features-grid {
+    @media (min-width: 900px) {
+      .premium-grid {
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Mobile Features Optimization */
+    @media (max-width: 768px) {
+      .features-premium {
+        padding: 4rem 0;
+      }
+
+      .features-header {
+        margin-bottom: 2.5rem;
+      }
+
+      .features-header h2 {
+        font-size: 2rem;
+      }
+
+      .premium-grid {
+        gap: 1rem;
+      }
+
+      .premium-card {
+        padding: 1.5rem;
       }
     }
 
@@ -484,7 +623,9 @@
     .logo-ticker {
       padding: 1.5rem 0;
       overflow: hidden;
-      background: white;
+      background: var(--bg-body);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .logo-ticker-content {
@@ -512,6 +653,13 @@
       height: 100%;
       width: auto;
       object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-item:hover img {
+      opacity: 1;
     }
 
     /* Removed hover effect for grayscale */
@@ -550,7 +698,7 @@
     }
 
     .pricing-card {
-      background: white;
+      background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 2rem;
@@ -614,59 +762,249 @@
       color: var(--text-muted);
     }
 
-    .pricing-features {
-      margin: 2rem 0;
-      flex-grow: 1;
+    /* Pricing - Modern Mobile Style */
+    .premium-plan-section {
+      padding: 4rem 1.5rem;
+      background: var(--bg-body);
+      color: white;
     }
 
-    .pricing-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
+    .plan-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .plan-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-header p {
+      font-size: 1.125rem;
       color: var(--text-muted);
     }
 
+    .text-highlight {
+      color: var(--primary);
+      /* Site primary color */
+      font-weight: 700;
+    }
+
+    /* RESTORED: Needed for other sections */
     .check-icon {
       color: var(--primary);
       width: 20px;
       height: 20px;
     }
 
-    @media (min-width: 900px) {
-      .pricing-grid {
+    /* Shared Features List */
+    .plan-features-list {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 1.1rem;
+      color: #E2E2E2;
+    }
+
+    .check-icon-modern {
+      color: var(--primary);
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Cards Container */
+    .plan-cards-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .plan-cards-container {
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
+        /* vertical align if heights differ */
       }
     }
 
-    /* Comparison Table */
-    .comparison-wrapper {
-      overflow-x: auto;
-      margin-top: 3rem;
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: 1rem;
+    /* Individual Card Style */
+    .plan-card-modern {
+      background: #1C1C1E;
+      /* Dark Apple-style gray */
+      border-radius: 1.5rem;
+      padding: 2rem 1.5rem;
       text-align: center;
-      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s, background 0.2s;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 220px;
+      position: relative;
     }
 
-    .comparison-table th:first-child,
-    .comparison-table td:first-child {
-      text-align: left;
-      font-weight: 600;
+    .plan-card-modern:hover {
+      background: #2C2C2E;
+      transform: translateY(-4px);
     }
 
-    .comparison-table th {
-      background: var(--bg-surface);
+    /* Featured/Best Value Card */
+    .plan-card-modern.featured {
+      border-color: white;
+      background: #1C1C1E;
+      z-index: 2;
+    }
+
+    .featured-badge {
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #FF4D6A;
+      /* Pinkish-red from ref */
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(255, 77, 106, 0.4);
+    }
+
+    .plan-duration {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .plan-price-large {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0.5rem 0;
+      line-height: 1;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #8E8E93;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .plan-per-period {
+      font-size: 0.9rem;
+      color: #8E8E93;
+      margin-top: 0.5rem;
+    }
+
+
+    /* Pro Comparison Section */
+    .comparison-section {
+      padding: 4rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .comparison-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .comparison-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .comparison-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .comp-card {
+      background: var(--bg-surface-2);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+
+    .comp-card.premium {
+      background: rgba(229, 9, 20, 0.05);
+      /* Subtle tint of primary */
+      border-color: var(--primary);
+      position: relative;
+    }
+
+    .comp-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: white;
+    }
+
+    .comp-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .comp-list li {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .comp-list li.highlight {
+      color: white;
+      font-weight: 500;
+    }
+
+    .comp-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .comp-icon.yes {
+      color: var(--primary);
+    }
+
+    .comp-icon.no {
+      color: #888;
+    }
+
+    @media (min-width: 768px) {
+      .comparison-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .comp-card.premium {
+        transform: scale(1.05);
+        z-index: 2;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
     }
 
     /* How it Works */
@@ -830,7 +1168,8 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: white;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
       padding: 1rem;
       box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
       z-index: 990;
@@ -1030,6 +1369,128 @@
         min-width: 200px;
       }
     }
+
+    /* Content Categories Section */
+    .content-showcase {
+      padding: 4rem 0;
+      background: var(--bg-body);
+    }
+
+    .content-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+
+    .content-subtitle {
+      color: #10b981;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .content-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .content-description {
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.125rem;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .category-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 9/16;
+      isolation: isolate;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.8) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 1.5rem;
+    }
+
+    .category-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .category-super {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0.25rem;
+      opacity: 0.9;
+    }
+
+    .category-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 600px) {
+      .content-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .content-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    /* Animation - Pro & Clean */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 
   <script type="application/ld+json">
@@ -1037,10 +1498,10 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "IPTV Rich",
-      "url": "https://iptvrich.shop",
-      "logo": "https://iptvrich.shop/assets/logo.png",
-      "description": "Premium streaming service provider offering 40K+ live channels and VOD in stunning 4K quality."
+      "name": "Big IPTV",
+      "url": "https://bigiptv.shop",
+      "logo": "https://bigiptv.shop/assets/logo.png",
+      "description": "Premium B1G IPTV streaming service provider offering 40K+ live channels and VOD in stunning 8K/4K quality."
     },
     {
       "@context": "https://schema.org",
@@ -1048,7 +1509,7 @@
       "serviceType": "IPTV Streaming Service",
       "provider": {
         "@type": "Organization",
-        "name": "IPTV Rich"
+        "name": "Big IPTV"
       },
       "areaServed": "World",
       "hasOfferCatalog": {
@@ -1079,7 +1540,7 @@
           "name": "What is it and what does it offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is a premium streaming service offering over 40,000 live channels and 200,000 VOD titles in 4K resolution."
+            "text": "It is a premium streaming service offering over 40,000 live channels and 200,000 VOD titles in 8K & 4K resolution."
           }
         },
         {
@@ -1102,12 +1563,12 @@
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="#" class="logo">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-          <polyline points="17 2 12 7 7 2"></polyline>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="5" width="28" height="22" rx="5" stroke="currentColor" stroke-width="2.5" />
+          <text x="16" y="21" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="currentColor"
+            text-anchor="middle">BIG</text>
         </svg>
-        IPTV Rich
+        Big IPTV
       </a>
 
       <nav class="desktop-nav">
@@ -1115,7 +1576,7 @@
         <a href="#library" class="nav-link">Library</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
+        <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%20Support"
           class="btn btn-primary">Start Free Trial</a>
       </nav>
 
@@ -1136,45 +1597,28 @@
     <a href="#library" class="mobile-nav-link">Library</a>
     <a href="#pricing" class="mobile-nav-link">Pricing</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
-    <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support" class="btn btn-primary"
+    <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%20Support" class="btn btn-primary"
       style="margin-top: 1rem; text-align: center;">Start Free Trial</a>
   </div>
 
   <main>
     <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero reveal">
       <div class="container hero-content">
         <div class="hero-text-wrapper">
-          <h1>Experience Premium <br><span class="text-primary">IPTV Rich</span> Entertainment</h1>
-          <p>Unlock the ultimate streaming experience with +40,000 Live Channels and +200,000 VOD (Films & Series) in
-            stunning 4K Quality. Enjoy buffer-free streaming with no contracts.</p>
+          <h1>Premium <span class="text-primary">B1G IPTV Streaming</span> <br>in 8K Ultra HD</h1>
+          <p>Access 40,000+ live TV channels, movies, and series on all your favorite devices with Big IPTV instant
+            activation
+            and zero buffering.</p>
 
-          <div class="hero-btns">
-            <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
-              class="btn btn-primary">Start Free Trial</a>
-            <a href="#features" class="btn btn-secondary">Explore Features</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-val">+40K</span>
-              <span class="stat-label">Channels</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-val">+200K</span>
-              <span class="stat-label">Films & Series</span>
-            </div>
-
-            <div class="stat-item">
-              <span class="stat-val">8K/4K</span>
-              <span class="stat-label">UHD Quality</span>
-            </div>
-          </div>
+          <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%20Start%20Free%20Trial"
+            class="hero-btn">Start 24h Free Trial</a>
         </div>
 
         <div class="hero-image-wrapper">
-          <img src="assets/IPTV-4k-king.webp" alt="Premium Streaming Interface" loading="eager" width="800" height="450"
-            style="width: 100%; height: auto; object-fit: contain;">
+          <img src="assets/IPTV-4k-king.webp" alt="Big IPTV Streaming Interface on Smart TV" width="800" height="450"
+            loading="eager">
         </div>
       </div>
     </section>
@@ -1216,249 +1660,321 @@
       </div>
     </div>
 
-    <!-- Features Section -->
-    <section id="features" class="section-padding">
+    <!-- Features Section - Premium Redesign -->
+    <section id="features" class="features-premium reveal">
       <div class="container">
-        <div class="text-center" style="margin-bottom: 3rem;">
-          <h2 style="font-size: 2rem; margin-bottom: 1rem;">Why Choose Our <span class="text-primary">Service</span>?
-          </h2>
-          <p class="text-muted">We deliver the premium viewing experience you deserve.</p>
+        <div class="features-header reveal">
+          <h2>The Gold Standard of Streaming</h2>
+          <p>Engineered for performance, designed for true entertainment enthusiasts. Experience the difference of a
+            premium service.</p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <!-- TV Icon -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        <div class="premium-grid reveal">
+          <!-- Feature 1: Quality -->
+          <div class="premium-card">
+            <div class="icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                <circle cx="12" cy="13" r="4"></circle>
+                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                <polyline points="17 2 12 7 7 2"></polyline>
               </svg>
             </div>
-            <h3>Crystal Clear 4K UHD</h3>
-            <p>Enjoy pristine picture quality with support for 8K, 4K, and FHD channels. Experience every detail.</p>
+            <h3>Crystal Clear 8K & 4K</h3>
+            <p>Immerse yourself in lifelike detail. We deliver high-bitrate streams for uncompromising visual fidelity
+              in movies and live TV.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <!-- Bolt Icon for Anti-Freeze -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+
+          <!-- Feature 2: Stability -->
+          <div class="premium-card">
+            <div class="icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
               </svg>
             </div>
-            <h3>Anti-Freeze Technology</h3>
-            <p>Our proprietary anti-freeze technology ensures a smooth, buffer-free streaming experience.</p>
+            <h3>Zero-Buffer Technology</h3>
+            <p>Powered by an advanced global CDN network, ensuring rock-solid stability and instant loading during the
+              biggest live sports events.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <!-- Shield Icon for VPN -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+
+          <!-- Feature 3: Security -->
+          <div class="premium-card">
+            <div class="icon-wrapper">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
               </svg>
             </div>
-            <h3>Built-In Secure VPN</h3>
-            <p>Stay safe and anonymous while streaming. Our service includes a built-in secure VPN for max privacy.</p>
+            <h3>Secure & Private</h3>
+            <p>Stream with total confidence. Our integrated secure streaming protocols keep your connection anonymous
+              and protected at all times.</p>
           </div>
         </div>
       </div>
     </section>
 
-
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="section-padding">
+    <!-- Content Showcase Section -->
+    <section class="content-showcase reveal">
       <div class="container">
-        <div class="text-center">
-          <h2 style="font-size: 2rem; margin-bottom: 1rem;">Affordable <span class="text-primary">Premium</span>
-            Subscription Plans</h2>
-
-          <p class="text-muted">Best value plans with no hidden fees. Cancel anytime.</p>
+        <div class="content-header">
+          <span class="content-subtitle">INCLUDED IN ALL PLANS</span>
+          <h2 class="content-title">Thousands of Shows & Movies</h2>
+          <p class="content-description">
+            Get full access to the entire Big IPTV streaming library along with your favorite live sports, breaking
+            news,
+            exclusive documentaries, can't miss events, and current shows.
+          </p>
         </div>
 
-        <div class="pricing-grid">
-          <!-- Monthly Plan -->
-          <div class="pricing-card" data-plan="monthly">
-            <h3>1 Month</h3>
-            <div class="price">£8.99 <span
-                style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/mo</span></div>
-            <ul class="pricing-features">
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> +40K international channels</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> +200K films and series</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Full Pure 8K 4K UHD</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Built-In Secure VPN</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Server Uptime & Updated EPG</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> AntiFreeze Technology</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> 24/7 Tech Assistance</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> PPV Channels Included</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Adult Channels Included</li>
-            </ul>
-            <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
-              class="btn btn-secondary" style="width: 100%">Choose Plan</a>
-          </div>
+        <div class="content-grid">
+          <!-- TV Shows -->
+          <a href="tv-shows.html" class="category-card">
+            <img src="assets/show.webp" alt="TV Shows" loading="lazy">
+            <div class="category-overlay">
+              <div class="category-text">
+                <div class="category-super">Past & Newly Added</div>
+                <div class="category-name">TV Shows</div>
+              </div>
+            </div>
+          </a>
 
-          <!-- Yearly Plan (Popular) -->
-          <div class="pricing-card popular" data-plan="yearly">
-            <div class="popular-badge">Best Value</div>
-            <h3>12 Months</h3>
-            <div class="price">£49.99 <span
-                style="font-size: 1rem; color: rgba(255,255,255,0.8); font-weight: normal;">/yr</span></div>
-            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem; color: var(--text-muted);">Save 50%
-              compared to monthly!</p>
-            <ul class="pricing-features">
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> +40K international channels</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> +200K films and series</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Full Pure 8K 4K UHD</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Built-In Secure VPN</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Server Uptime & Updated EPG</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> AntiFreeze Technology</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> 24/7 Tech Assistance</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> PPV Channels Included</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Adult Channels Included</li>
-            </ul>
-            <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
-              class="btn btn-primary" style="width: 100%">Get Started Now</a>
-          </div>
+          <!-- Movies -->
+          <a href="movies.html" class="category-card">
+            <img src="assets/movie.webp" alt="Movies" loading="lazy">
+            <div class="category-overlay">
+              <div class="category-text">
+                <div class="category-super">New & Classic</div>
+                <div class="category-name">Movies</div>
+              </div>
+            </div>
+          </a>
 
-          <!-- 6 Months Plan -->
-          <div class="pricing-card" data-plan="sixmonth">
-            <h3>6 Months</h3>
-            <div class="price">£39.99 <span
-                style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/6mo</span></div>
-            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1rem; visibility: hidden;">Placeholder</p>
-            <ul class="pricing-features">
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> +40K international channels</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> +180K films and series</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Full Pure 8K 4K UHD</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Built-In Secure VPN</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Server Uptime & Updated EPG</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> AntiFreeze Technology</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> 24/7 Tech Assistance</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> PPV Channels Included</li>
-              <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg> Adult Channels Included</li>
-            </ul>
-            <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
-              class="btn btn-secondary" style="width: 100%">Choose Plan</a>
-          </div>
-        </div>
+          <!-- Sports -->
+          <a href="sports.html" class="category-card">
+            <img src="assets/sport.webp" alt="Sports" loading="lazy">
+            <div class="category-overlay">
+              <div class="category-text">
+                <div class="category-super">Biggest Live</div>
+                <div class="category-name">Sports</div>
+              </div>
+            </div>
+          </a>
 
-        <!-- Comparison Table with Data Attributes for Mobile -->
-        <div class="comparison-wrapper">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th style="color: var(--text-main);">Features</th>
-                <th style="color: var(--primary); font-size: 1.1rem; background: rgba(107, 70, 255, 0.05);">Premium Plan
-                </th>
-                <th>Other Providers</th>
-                <th>CABLE TV</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Feature">Avg. Monthly Price</td>
-                <td data-label="Premium Plan"
-                  style="color: #10b981; font-weight: 700; background: rgba(107, 70, 255, 0.05);">£4.16 <span
-                    style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Annual Plan)</span></td>
-                <td data-label="OTHERS">£10 - £20</td>
-                <td data-label="CABLE TV">£40 - £80+</td>
-              </tr>
-              <tr>
-                <td data-label="Feature">Live Channels</td>
-                <td data-label="Premium Plan"
-                  style="color: #10b981; font-weight: 700; background: rgba(107, 70, 255, 0.05);">40,000+</td>
-                <td data-label="OTHER IPTV">5,000 - 10,000</td>
-                <td data-label="CABLE TV">~400</td>
-              </tr>
-              <tr>
-                <td data-label="Feature">Movies & VOD</td>
-                <td data-label="Premium Plan"
-                  style="color: #10b981; font-weight: 700; background: rgba(107, 70, 255, 0.05);">200,000+</td>
-                <td data-label="OTHER IPTV">20,000 - 50,000</td>
-                <td data-label="CABLE TV">Limited On-Demand</td>
-              </tr>
-              <tr>
-                <td data-label="Feature">4K / 8K Quality</td>
-                <td data-label="Premium Plan" style="background: rgba(107, 70, 255, 0.05);"><span
-                    style="color: #10b981; font-weight: 700;">&#10003; Yes</span></td>
-                <td data-label="OTHER IPTV"><span style="color: #10b981; font-weight: 700;">&#10003; Limited</span></td>
-                <td data-label="CABLE TV"><span style="color: #ef4444; font-weight: 700;">&#10007; Extra Fees</span>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Feature">All Device Support</td>
-                <td data-label="Premium Plan" style="background: rgba(107, 70, 255, 0.05);"><span
-                    style="color: #10b981; font-weight: 700;">&#10003; Yes</span></td>
-                <td data-label="OTHER IPTV"><span style="color: #10b981; font-weight: 700;">&#10003; Yes</span></td>
-                <td data-label="CABLE TV"><span style="color: #ef4444; font-weight: 700;">&#10007; Locked to Box</span>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Feature">No Contract</td>
-                <td data-label="Premium Plan" style="background: rgba(107, 70, 255, 0.05);"><span
-                    style="color: #10b981; font-weight: 700;">&#10003; Yes</span></td>
-                <td data-label="OTHER IPTV"><span style="color: #10b981; font-weight: 700;">&#10003; Yes</span></td>
-                <td data-label="CABLE TV"><span style="color: #ef4444; font-weight: 700;">&#10007; 12-24 Months</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- Documentary -->
+          <a href="documentary.html" class="category-card">
+            <img src="assets/documentary.webp" alt="Documentary" loading="lazy">
+            <div class="category-overlay">
+              <div class="category-text">
+                <div class="category-super">Groundbreaking</div>
+                <div class="category-name">Documentary</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- News -->
+          <a href="news.html" class="category-card">
+            <img src="assets/Breaking-News.webp" alt="Breaking News" loading="lazy">
+            <div class="category-overlay">
+              <div class="category-text">
+                <div class="category-super">Breaking News</div>
+                <div class="category-name">24h/7</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Kids -->
+          <a href="kids.html" class="category-card">
+            <img src="assets/kids.webp" alt="Kids Entertainment" loading="lazy">
+            <div class="category-overlay">
+              <div class="category-text">
+                <div class="category-super">Entertainment</div>
+                <div class="category-name">For Kids</div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
+    </section>
+
+    <!-- Pricing Section (Modern Redesign) -->
+    <section id="pricing" class="premium-plan-section reveal">
+      <div class="container">
+        <!-- Header -->
+        <div class="plan-header reveal">
+          <h2>Premium Plan</h2>
+          <p>Let's make your entertainment <span class="text-highlight">easier & more effective!</span></p>
+        </div>
+
+        <!-- Features List (Consolidated) -->
+        <div class="plan-features-list">
+          <div class="feature-item">
+            <svg class="check-icon-modern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Access 40,000+ Live Channels (Global Coverage)</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon-modern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Over 200,000 Movies & TV Series (VOD)</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon-modern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>True 8K & 4K UHD Quality + Anti-Freeze Tech</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon-modern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Free Built-In VPN for Secure Streaming</span>
+          </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="plan-cards-container">
+          <!-- 1 Month -->
+          <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%201%20Month%20Plan"
+            class="plan-card-modern">
+            <div class="plan-duration">1 Month</div>
+            <div class="plan-price-large">£8.99</div>
+            <div class="plan-per-period">£8.99 / mo</div>
+          </a>
+
+          <!-- 12 Months (Featured) -->
+          <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%2012%20Month%20Plan"
+            class="plan-card-modern featured">
+            <div class="plan-duration">12 Months</div>
+            <div class="old-price">£107.88</div>
+            <div class="plan-price-large">£49.99</div>
+            <div class="plan-per-period">£4.16 / mo</div>
+            <div class="featured-badge">Best Value</div>
+          </a>
+
+          <!-- 6 Months -->
+          <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%206%20Month%20Plan"
+            class="plan-card-modern">
+            <div class="plan-duration">6 Months</div>
+            <div class="old-price">£53.94</div>
+            <div class="plan-price-large">£39.99</div>
+            <div class="plan-per-period">£6.66 / mo</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section (Simplified) -->
+    <section class="comparison-section reveal">
+      <div class="comparison-header">
+        <h2>Why Choose Us?</h2>
+        <p style="color: var(--text-muted);">See exactly how we stack up against the competition.</p>
+      </div>
+
+      <div class="comparison-cards">
+        <!-- Other IPTV -->
+        <div class="comp-card">
+          <h3 style="color: #bbb;">Other Providers</h3>
+          <ul class="comp-list">
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Standard HD Quality
+            </li>
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Frequent Buffering
+            </li>
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Limited 5,000 Channels
+            </li>
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              No VPN Included
+            </li>
+          </ul>
+        </div>
+
+        <!-- Our Premium Service -->
+        <div class="comp-card premium">
+          <h3>Premium Plan</h3>
+          <ul class="comp-list">
+            <li class="highlight">
+              <svg class="comp-icon yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              True 8K & 4K UHD
+            </li>
+            <li class="highlight">
+              <svg class="comp-icon yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Zero Buffering (CDN)
+            </li>
+            <li class="highlight">
+              <svg class="comp-icon yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              40,000+ Live Channels
+            </li>
+            <li class="highlight">
+              <svg class="comp-icon yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Free Secure VPN
+            </li>
+            <li class="highlight">
+              <svg class="comp-icon yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Multi-Device Support
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cable TV -->
+        <div class="comp-card">
+          <h3 style="color: #bbb;">Traditional Cable</h3>
+          <ul class="comp-list">
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Expensive (£40-£80+)
+            </li>
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Long Contracts (1-2 yrs)
+            </li>
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Limited Channel Selection
+            </li>
+            <li>
+              <svg class="comp-icon no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+              Hardware Required
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    </div>
     </section>
 
     <!-- Next-Gen Experience (Moved Here) -->
@@ -1470,10 +1986,9 @@
             <span class="text-primary"
               style="font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">Live
               TV</span>
-            <h3>Access 40,000+ <br>Live Channels</h3>
-            <p>Our service offers coverage in over 190 countries, including the UK, US, Canada, Europe, and
-              Asia. Access live HD channels in multiple languages anywhere in the
-              world.</p>
+            <h3>Watch 40,000+ <br>Live Global Channels</h3>
+            <p>Big IPTV offers extensive coverage across 190+ countries, including USA, UK, Canada, Europe, and
+              Asia. Switch instantly between live HD sports, news, and entertainment channels.</p>
             <ul class="split-lists">
               <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                   <polyline points="20 6 9 17 4 12"></polyline>
@@ -1487,7 +2002,7 @@
             </ul>
           </div>
           <div class="split-image">
-            <img src="assets/feature-iptv.webp" alt="IPTV Interface Screenshot" loading="lazy">
+            <img src="assets/feature-iptv.webp" alt="Big IPTV Live Channel List Interface" loading="lazy">
           </div>
         </div>
 
@@ -1496,10 +2011,10 @@
           <div class="split-content">
             <span class="text-primary"
               style="font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">VOD</span>
-            <h3>200,000+ <br>Movies & Series</h3>
-            <p>Why overpay for streaming? With our subscription, access a vast Video-on-Demand library for
-              just £8.99/mo. Our premium platform lets you instantly watch the latest releases, classics, and
-              more from any device.</p>
+            <h3>Massive VOD Library: <br>200,000+ Movies & Series</h3>
+            <p>Save money on multiple subscriptions. With Big IPTV, you get a colossal library of Video-on-Demand
+              content.
+              Watch the latest blockbusters, trending series, and classic films in 8K on any device.</p>
             <ul class="split-lists">
               <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                   <polyline points="20 6 9 17 4 12"></polyline>
@@ -1513,7 +2028,7 @@
             </ul>
           </div>
           <div class="split-image">
-            <img src="assets/iptv recommendations.webp" alt="IPTV Recommendations Screenshot" loading="lazy">
+            <img src="assets/iptv-recommendations.webp" alt="Big IPTV VOD Movies and Series Collection" loading="lazy">
           </div>
         </div>
       </div>
@@ -1524,17 +2039,16 @@
       <div class="container">
         <div class="split-row">
           <div class="split-image">
-            <img src="assets/ppv sport iptv.webp" alt="Live Sports Streaming" loading="lazy">
+            <img src="assets/ppv-sport-iptv.webp" alt="Big IPTV Live Sports and PPV Events" loading="lazy">
           </div>
           <div class="split-content">
             <span class="text-primary"
               style="font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">Live
               Sports</span>
-            <h3>The Perfect Streaming Solution for Sports Fans</h3>
-            <p>Enjoy your favorite sports with our comprehensive IPTV server! Stream hundreds of live events, including
-              international soccer, major fights, the Superbowl, and cricket, without expensive sports packages. From
-              NFL to Champions League to Formula 1, <strong>our platform</strong> is a must-have for sports enthusiasts.
-              Don't miss the action!</p>
+            <h3>Stream Live Sports & PPV Events</h3>
+            <p>Never miss a game again. Big IPTV is the ultimate solution for sports fans. Stream NFL, NBA, EPL,
+              UFC, boxing, cricket, and F1 in high definition. We cover all major leagues and Pay-Per-View events
+              without blackouts.</p>
             <ul class="split-lists">
               <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                   <polyline points="20 6 9 17 4 12"></polyline>
@@ -1555,15 +2069,14 @@
     <section class="section-padding" style="background: var(--bg-surface-2);">
       <div class="container">
         <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
-          <h2 style="font-size: 2rem; margin-bottom: 1rem;">Watch on TV, PC or Mobile</h2>
-          <p class="text-muted" style="margin-bottom: 2rem;">Tired of limited channels? Get over
-            40,000 channels, movies, and sports. Enjoy the best streaming provider on
-            any device—mobile, computer, or Smart TV. Compatible with Android boxes and Amazon Fire
-            Sticks, all for just £8.99 per month.</p>
+          <h2 style="font-size: 2rem; margin-bottom: 1rem;">Compatible with All Your Devices</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">
+            Big IPTV works on everything. Stream comfortably on your Smart TV (Samsung, LG, Sony), Android Box,
+            Firestick, Mag Box, Apple TV, PC, or Smartphone. Get the best multi-device experience now.</p>
         </div>
         <div style="display: flex; justify-content: center;">
-          <img src="assets/all-devices-iptv.webp" alt="Compatible Devices" loading="lazy"
-            style="border-radius: var(--radius-lg);">
+          <img src="assets/all-devices-iptv.webp" alt="Big IPTV Compatible Devices (Firestick, Android, Smart TV)"
+            loading="lazy" style="border-radius: var(--radius-lg);">
         </div>
       </div>
     </section>
@@ -1582,28 +2095,25 @@
 
         <!-- World Map Image -->
         <div class="map-container">
-          <img src="assets/iptv-world-map.webp" alt="Global Server Map" loading="lazy"
+          <img src="assets/iptv-world-map.webp" alt="Big IPTV Global Server Network Map" loading="lazy"
             style="width: 100%; height: auto; display: block; opacity: 0.8;">
         </div>
 
-        <div class="coverage-grid">
-          <div class="feature-card"
-            style="text-align: center; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <h4 style="font-size: 3rem; color: var(--primary); margin-bottom: 0.5rem; line-height: 1;">190+</h4>
-            <p style="font-weight: 600; margin-bottom: 0.5rem;">Countries Supported</p>
-            <p class="text-muted" style="font-size: 0.9rem;">Watch local content from anywhere.</p>
+        <div class="stats-grid-modern reveal">
+          <div class="stat-card-premium">
+            <div class="stat-number-gradient">190+</div>
+            <div class="stat-label-modern">Countries Supported</div>
+            <div class="stat-desc-modern">Watch local content from anywhere.</div>
           </div>
-          <div class="feature-card"
-            style="text-align: center; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <h4 style="font-size: 3rem; color: var(--primary); margin-bottom: 0.5rem; line-height: 1;">50+</h4>
-            <p style="font-weight: 600; margin-bottom: 0.5rem;">Languages Available</p>
-            <p class="text-muted" style="font-size: 0.9rem;">Multi-language subtitles and audio.</p>
+          <div class="stat-card-premium">
+            <div class="stat-number-gradient">50+</div>
+            <div class="stat-label-modern">Languages Available</div>
+            <div class="stat-desc-modern">Multi-language subtitles and audio.</div>
           </div>
-          <div class="feature-card"
-            style="text-align: center; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <h4 style="font-size: 3rem; color: var(--primary); margin-bottom: 0.5rem; line-height: 1;">100+</h4>
-            <p style="font-weight: 600; margin-bottom: 0.5rem;">Premium Servers</p>
-            <p class="text-muted" style="font-size: 0.9rem;">99.9% Uptime guarantee.</p>
+          <div class="stat-card-premium">
+            <div class="stat-number-gradient">100%</div>
+            <div class="stat-label-modern">Uptime Guarantee</div>
+            <div class="stat-desc-modern">Rock-solid stability for live events.</div>
           </div>
         </div>
       </div>
@@ -1616,7 +2126,7 @@
         <div class="split-row">
           <div class="split-content">
             <h2 style="font-size: 2rem; margin-bottom: 1rem;">Prioritising Quality Over Quantity</h2>
-            <p style="margin-bottom: 1rem;">At <strong>IPTV Rich</strong>, we prioritise quality over quantity. Unlike
+            <p style="margin-bottom: 1rem;">At <strong>Big IPTV</strong>, we prioritise quality over quantity. Unlike
               overcrowded services, we keep a limited number of subscribers to ensure top-tier streaming quality for
               every user.</p>
             <p style="margin-bottom: 1rem;">Based in Canada, we are dedicated to delivering the best service without the
@@ -1624,11 +2134,11 @@
               new sign-ups, keeping space reserved for our loyal customers.</p>
             <p style="margin-bottom: 1.5rem;">Say goodbye to shady overseas services and choose the trusted provider
               that truly puts quality first.</p>
-            <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
+            <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%20Support"
               class="btn btn-primary">Join Our Exclusive Network</a>
           </div>
           <div class="split-image">
-            <img src="assets/best-devices-top-new-iptv.webp" alt="Top Tier Streaming Quality" loading="lazy"
+            <img src="assets/best-devices-top-new-iptv.webp" alt="Big IPTV Quality Streaming Promise" loading="lazy"
               style="border-radius: var(--radius-lg);">
           </div>
         </div>
@@ -1646,7 +2156,8 @@
         <div class="testimonials-grid">
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>"Finally found a service that doesn't buffer during the big game. The 4K quality is actually 4K. Highly
+            <p>"Finally found a service that doesn't buffer during the big game. The 8K quality is actually incredible.
+              Highly
               recommended for sports fans!"</p>
             <span class="author">- Sarah J.</span>
           </div>
@@ -1673,17 +2184,16 @@
         </div>
         <div class="faq-list fade-in visible">
           <details class="faq-item">
-            <summary class="faq-question">What is IPTV Rich and what does it offer?</summary>
+            <summary class="faq-question">What is Big IPTV and what does it offer?</summary>
             <div class="faq-answer">
-              <p>We are a premium 4K streaming provider delivering a massive library including:
+              <p>Big IPTV is the world's leading premium streaming service. We offer an unbeatable selection of content:
               </p>
               <ul>
-                <li>40,000+ live TV channels from around the world</li>
-                <li>200,000+ movies and series in 4K Ultra HD, Full HD, and HD quality</li>
-                <li>Anti-freeze technology, multi-device compatibility, and daily updates</li>
+                <li><strong>40,000+</strong> Live Channels (Sports, News, Entertainment)</li>
+                <li><strong>200,000+</strong> VOD (Movies & Series) in 8K & 4K UHD</li>
+                <li><strong>Anti-Freeze 9.0</strong> Technology for stable streaming</li>
               </ul>
-              <p>Whether you're into sports or movies, getting a subscription ensures a complete, high-quality
-                streaming experience.</p>
+              <p>We provide a cost-effective alternative to cable with superior quality and variety.</p>
             </div>
           </details>
           <details class="faq-item">
@@ -1717,7 +2227,7 @@
                 <li>6-month plan – great for regular users (£39.99)</li>
                 <li>12-month plan – best value (£49.99)</li>
               </ul>
-              <p>All plans include full access to live TV, VOD, and premium features like 4K streaming.</p>
+              <p>All plans include full access to live TV, VOD, and premium features like 8K streaming.</p>
             </div>
           </details>
           <details class="faq-item">
@@ -1743,14 +2253,14 @@
     <!-- Footer CTA (Formerly Newsletter) -->
     <section class="section-padding" style="background: var(--primary); color: white;">
       <div class="container text-center">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Try IPTV Rich for Free</h2>
+        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Start Your Free Trial with Big IPTV</h2>
         <p
           style="opacity: 0.9; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1rem; line-height: 1.6;">
           With over 40,000 live TV channels and 200,000+ on-demand titles, we cover 18 languages and 150+
           countries, providing you with the best in sports, movies, series, kids’ shows, news, music, and more.
         </p>
         <div class="footer-cta-btns">
-          <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
+          <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%20Support"
             class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get Your Free
             Trial</a>
           <a href="#pricing" class="btn btn-outline"
@@ -1770,15 +2280,15 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="#" class="logo" style="color: white; margin-bottom: 1rem; display: inline-block;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-              <polyline points="17 2 12 7 7 2"></polyline>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="5" width="28" height="22" rx="5" stroke="currentColor" stroke-width="2.5" />
+              <text x="16" y="21" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="currentColor"
+                text-anchor="middle">BIG</text>
             </svg>
-            IPTV Rich
+            Big IPTV
           </a>
           <p style="color: #94a3b8; line-height: 1.6;">
-            The #1 service providing high-quality 4K entertainment to viewers worldwide.
+            The #1 service providing high-quality 8K entertainment to viewers worldwide.
           </p>
         </div>
         <div class="footer-col">
@@ -1801,15 +2311,16 @@
         <!-- Connect Section Removed -->
       </div>
       <div class="copyright">
-        &copy; 2024 IPTV Rich. All rights reserved.
+        &copy; 2024 Big IPTV. All rights reserved.
       </div>
     </div>
   </footer>
 
   <!-- Sticky CTA Mobile -->
   <div class="sticky-cta" id="stickyCta">
-    <a href="https://api.whatsapp.com/send?phone=19145205753&text=STREAMX%20TV%20-%20Support"
-      class="btn btn-primary">Start Free Trial</a>
+    <a href="https://api.whatsapp.com/send?phone=19145205753&text=Big%20IPTV%20-%20Support"
+      class="btn btn-primary">Start
+      Free Trial</a>
   </div>
 
   <!-- Inline JS (Module) -->
@@ -1901,6 +2412,29 @@
     // Lazy Load Observer (Polyfill-like behavior for bg images if needed, 
     // but native loading="lazy" handles <img> tags)
     // This script block is kept minimal intentionally.
+  </script>
+
+  <!-- Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      }, observerOptions);
+
+      const revealElements = document.querySelectorAll(".reveal");
+      revealElements.forEach(el => observer.observe(el));
+    });
   </script>
 </body>
 
